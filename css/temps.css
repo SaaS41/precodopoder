@@ -56,6 +56,45 @@ nav button:focus {
     background: #303030;
 }
 
+nav span.em {
+    font-weight: 600;
+    color: #ff0000;
+}
+
+nav span.em2 {
+    font-weight: 600;
+    color: #ff9100;
+}
+
+nav .link {
+    position: relative;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: all .2s ease;
+}
+
+nav .link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .2s ease;
+}
+
+nav .link:hover::after {
+    transform-origin: left;
+    transform: scale(1);
+}
+
 .container {
     position: relative;
     display: grid;
@@ -142,6 +181,69 @@ nav button:focus {
     text-decoration: line-through;
     color: #ff0000;
 }
+
+/* PDP cards */
+.pdp.box-1 .info {
+    background: #f9c9bd;
+    color: var(--black);
+}
+
+.pdp.box-2 .info {
+    background: #841e00;
+    color: var(--white);
+}
+
+.pdp.box-3 .info {
+    background: #605750;
+    color: var(--white);
+}
+
+.pdp.box-4 .info {
+    background: #95948d;
+    color: var(--white);
+}
+
+.pdp.box-5 .info {
+    background: var(--white);
+    color: var(--black);
+}
+
+.pdp.box-6 .info {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* PDP: Eclipse cards */
+.pdpe.box-1 .info {
+    background: #e4c8b0;
+    color: var(--black);
+}
+
+.pdpe.box-2 .info {
+    background: #e4c8b0;
+    color: var(--black);
+}
+
+.pdpe.box-3 .info {
+    background: #fff;
+    color: var(--black);
+}
+
+.pdpe.box-4 .info {
+    background: #fff;
+    color: var(--black);
+}
+
+.pdpe.box-5 .info {
+    background: #fff;
+    color: var(--black);
+}
+
+.pdpe.box-6 .info {
+    background: #c8d4d4;
+    color: var(--black);
+}
+/* End of pdp cards */
 
 .box.active:hover .flip {
     transform: rotateY(-180deg);
